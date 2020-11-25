@@ -1,0 +1,78 @@
+public class Car extends CarTest{
+
+    private double weight;
+    private String brand;
+    private int years;
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight1) {
+        if (weight1 > 0) {
+            weight = weight1;
+        }
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand1) {
+        if (brand1 != null) {
+            brand = brand1;
+        }
+    }
+
+    public int getYears() {
+        return years;
+    }
+
+    public void setYears(int years1) {
+        if (years1 > 0) {
+            years = years1;
+        }
+    }
+
+    public double weightChange() {
+        double w = input.nextDouble();
+        if (w > 0) {
+            weight = w;
+        }
+        return w;
+    }
+
+    public static boolean Car(double weight) {
+        if (weight > 3500) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public Car(double weight, String brand, int years) {
+        this.setWeight(weight);
+        this.setBrand(brand);
+        this.setYears(years);
+
+    }
+
+    public Car(Car s) {
+        this(s.getWeight(), s.getBrand(), s.getYears());
+    }
+
+    public Car() {
+        this(2003, "Maybach", 2020);
+    }
+
+    public String toString(Car obj) {
+
+        obj.getWeight();
+        obj.getBrand();
+        obj.getYears();
+
+        return String.format("Weigth: %.2f, Brand: %s, Years: %d", getWeight(), getBrand(), getYears());
+    }
+
+    
+}
